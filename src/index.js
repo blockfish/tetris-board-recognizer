@@ -1,5 +1,6 @@
 import { imageToPixels, imageFromURL } from './utils'
 import { detectBounds } from './detect-bounds'
+import { classifyField } from './classify'
 
 export function recognizeImage(image) {
     return recognizePixels(imageToPixels(image));
@@ -12,5 +13,6 @@ export function recognizeBlob(blob) {
 
 export async function recognizePixels(pixels) {
     let bounds = detectBounds(pixels);
-    return { bounds };
+    let field = classifyField(pixels, bounds);
+    return { bounds, field };
 }

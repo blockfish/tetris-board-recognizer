@@ -9,6 +9,10 @@ export function toYCbCr(sRGB, YCbCr = new Float32Array(3)) {
     return YCbCr;
 }
 
+export function lerp(a, b, t) {
+    return a * (1 - t) + b * t;
+}
+
 export function imageToPixels(image) {
     let ctx2d = image.tagName === 'CANVAS' && image.getContext('2d');
     if (!ctx2d) {
