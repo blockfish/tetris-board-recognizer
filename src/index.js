@@ -1,4 +1,5 @@
 import { imageToPixels, imageFromURL } from './utils'
+import { detectBounds } from './detect-bounds'
 
 export function recognizeImage(image) {
     return recognizePixels(imageToPixels(image));
@@ -10,6 +11,6 @@ export function recognizeBlob(blob) {
 }
 
 export async function recognizePixels(pixels) {
-    await new Promise(res => setTimeout(res, 1000));
-    return { width: pixels.width, height: pixels.height };
+    let bounds = detectBounds(pixels);
+    return { bounds };
 }
