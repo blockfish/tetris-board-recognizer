@@ -1,0 +1,14 @@
+{
+  "name": "tetris-board-recognizer",
+  "version": "0.1.0",
+  "keywords": ["tetris", "image"],
+  "author": "iitalics",
+  "license": "LGPL-3.0-or-later",
+  "description": "Algorithms for detecting Tetris boards from an image.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo TODO; exit 1"
+  },
+  "devDependencies": {}
+}
